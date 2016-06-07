@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone='yes'?>
+<plate>
+	
+	<ingredients>
+		<templateset name="homepage" name_friendly="Homepage" view="homepage">
+			<fields>
+				<text name="opening_text" name_friendly="Opening Text" required="1" />
+				<text name="view_menu_link_text" name_friendly="View Menu Link Text" required="1" />
+				<internal_link name="view_menu_link" name_friendly="View Menu Link" required="1" />
+			</fields>
+			<items>
+				<item link_title="Homepage" path_part="zesty_home">
+					<opening_text><![CDATA[Explore our food and drinks menu including appetizers, soups, sushi, main dishes, desserts, wine, cocktails, beers, coffee, non-alcoholic drinks.]]></opening_text>
+					<view_menu_link_text><![CDATA[View Menu]]></view_menu_link_text>
+					<view_menu_link><![CDATA[501]]></view_menu_link>
+				</item>
+			</items>
+		</templateset>
+	</ingredients>
+
+	<!-- clippings -->	
+	<clippings>
+		<text name="site_name" name_friendly="Site Name" required="1"><![CDATA[The Zesty Cafe]]></text>
+		<images name="logo" name_friendly="Site Logo" limit="1">
+			<![CDATA[https://be93523bd41e2e475e74-e4edef19ad51123442eaceed55c78461.ssl.cf2.rackcdn.com/or-z-cafe-logo.png]]>
+		</images>
+		<text name="footer_excerpt_header" name_friendly="Footer Excerpt Header"><![CDATA[About]]></text>
+		<textarea name="footer_excerpt" name_friendly="Footer Excerpt">
+			<![CDATA[Write your about section!]]>
+		</textarea>
+		<text name="footer_text" name_friendly="Footer Text">
+			<![CDATA[Footer text can be updated in Content Clippings]]>
+		</text>
+		<text name="hours_header_text" name_friendly="Hours Header Text"><![CDATA[Open Hours]]></text>
+		<textarea name="hours" name_friendly="Hours">
+			<![CDATA[Monday - Friday: 8:00am - 10:00pm
+Saturday - Sunday: 10:00am - 6:00pm]]>
+		</textarea>
+		<text name="twitter_handle" name_friendly="Twitter Username"><![CDATA[twitter]]></text>
+		<text name="google_publisher_id" name_friendly="Google Publisher ID" />
+	</clippings>
+	
+	<!-- head files -->	
+	<head>
+		<doctype>html5</doctype>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				
+		<googlefont family="Roboto Condensed" weights="700,300,400" />
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" />
+	</head>
+
+</plate>

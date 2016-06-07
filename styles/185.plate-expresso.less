@@ -1,0 +1,339 @@
+
+body {
+	background-color: @body-bg-color;
+	.zestyBackground(@body-bg-image);
+}
+
+.structure {
+	max-width: @container-max-width;
+	margin: 0px auto;
+}
+
+.logo {
+	max-width: @logo-max-width;
+}
+
+.side-bar {
+	padding: @sidebar-padding;
+	background-color: @sidebar-bg-color;
+	.border-radius(@sidebar-border-radius);	
+	border: 1px @sidebar-border-color solid;
+}
+
+.z-container { 
+	max-width: @container-max-width; 
+	padding: 0px @default-spacing;
+	margin: 0px auto;
+}
+
+.structure { 
+	clear:both;
+	padding: (@default-spacing/2) 0px;
+	position: relative;
+	
+}
+
+/* header  */
+
+.header{
+	min-height: 60px;
+	margin: @default-spacing 0px;
+	
+	a.logo{
+		margin-top: @default-spacing;
+		
+		img {
+			max-width: 100%;
+			max-height: 120px;
+		}
+		
+		&:hover{
+			img{
+				.opacity(90);
+			}
+			
+		}
+	}
+	
+	#header-hours {
+		background:@accent-color;
+		padding: (@default-spacing/2);
+		.border-radius(@default-border-radius);
+		
+		
+		.hours-wrap {
+			border: 1px dashed lighten(@accent-color, 25%);
+			padding: 0px 10px 10px 10px;
+			background-color: lighten(@accent-color, 5%);
+			.border-radius(4px);
+			
+			h3 {
+				color: @sidebar-font-color;
+				line-height:1.5em;
+			}
+			
+			em {
+				font-size: 11px;	
+				color: @sidebar-font-color;
+			}
+		}
+		
+	}
+	
+}
+
+.menu-items {
+	
+	h3 {
+		text-shadow: 1px 1px 4px #000;
+	}
+}
+
+
+/* content  */
+
+.content { 
+	min-height:400px;
+}
+
+.page-content {
+	background-color: @content-bg-color;
+	padding: @default-spacing;
+	min-height:400px;
+}
+
+
+/* footer  */
+
+.footer { 
+	min-height: 80px; 
+	position: relative;
+	
+	background: @accent-color;
+	color: @content-bg-color;
+	line-height: 20px;
+	
+	h3 {
+		text-shadow: 1px 1px 4px #000;
+		color: @content-bg-color
+	}
+	
+	p {
+		color: @content-bg-color;	
+	}
+}
+
+/* navigation  */
+.navigation {
+	background: @nav-bg-color;
+	padding: 0px;
+	z-index: 10;
+	box-shadow: 0px 2px 10px #333;
+}
+
+ul#nav { 
+	float: @nav-align;
+	text-align: left;
+	margin:0px;
+	padding:0px;  
+	line-height:0px;
+	
+	
+	li { 
+		display: inline-table; 
+		list-style:none;  
+		margin:0px; 
+		padding:0px; 
+		line-height:0px;
+		float:left; // for ie
+		outline:0;
+		
+		a {
+			font-family: @nav-font;
+			font-weight: 300;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-shadow: 1px 1px 4px #000;
+			display:block;
+			height: 50px;
+			line-height: 50px;
+			font-size: 18px;
+			color: @nav-font-color;
+			
+			padding: 0px 20px;
+			margin:0px;
+			outline:0;
+			.transition(all 250ms ease);
+			
+			&:hover{
+				//color: darken(@z-font-primary-color, 8%);
+				cursor: pointer;
+			}
+			// a style that attaches to the url you are on, the "you are here" class
+			&.at,&.at:hover{
+				cursor: default;
+				background: darken(@nav-bg-color, 5%);
+			}
+			
+		}
+		
+		ul { 
+			display: none; // hides dropdowns
+		}
+	}
+}
+
+
+
+
+/* footer copyright */
+.copyright{ 
+	clear: both; 
+	text-align: center; 
+	font-size: 10px; 
+	padding: (@default-spacing*1.5) 0px (@default-spacing/2) 0px; 
+}
+
+
+// primary elements
+
+// social icons
+
+
+// bar break
+
+.headline-break{
+	background-color: @content-bg-color;
+	padding: (@default-spacing / 2) (@default-spacing / 2) 0px (@default-spacing / 2) ;
+	border-bottom: 1px @accent-color solid;
+	margin: (@default-spacing/2) 0px;
+	clear: both;
+	font-style: italic;
+	
+	a{
+		float:right;
+		font-style: italic;
+		text-decoration: none;
+		margin-top: (@default-spacing/2);
+		margin-right: (@default-spacing/2);
+	}		
+	
+	
+}
+
+// nivo modifications
+.nivo-holder {
+	padding: 0px 15px 10px 15px;
+	background: @content-bg-color;
+	margin: -10px auto 0px auto;
+}
+.nivo-caption {
+	position:absolute;
+	left:@default-spacing;
+	bottom:@default-spacing;
+	background:darken(@body-bg-color,75%);
+	width:38%;
+	z-index:8;
+	border-radius:@default-border-radius;
+	padding: @default-spacing;
+	@media screen and (max-width:620px) { padding: (@default-spacing/2); }
+	
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	h2{
+		font-size: (@h2-font-size);
+		margin-bottom:(@h2-font-size / 4);
+		padding: 0px;
+		color:lighten(@h2-font-color,75%);
+		
+	}
+	span{
+		color:lighten(@paragraph-font-color,75%);
+		padding-top: (@default-spacing/2);
+		line-height:@paragraph-line-height;
+		font-size:@paragraph-font-size;
+		
+		@media screen and (max-width:620px) {
+			display: none;
+		}
+	}
+	
+}
+
+.nivo-prevNav,.nivo-nextNav{
+	display: none;	
+}
+
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: (@default-spacing/4) 0px;
+	
+}
+.nivo-controlNav a {
+	.transition(all 250ms ease);
+	cursor:pointer;
+	text-indent: -9999px;
+	width: 100px;
+	background-color: #999;
+	height: 4px;	
+	margin-right:5px;
+	float:left;
+	display: inline-block;
+	&:hover{
+		background-color: #666;
+	}
+}
+.nivo-controlNav a.active {
+	background-color: #333;
+}
+
+// clear
+
+.clear,.floatfix{ clear:both}
+
+.page404 { 
+	text-align: center; 
+	
+	li {
+		list-style: none;
+	}
+	
+	form input {
+		margin: 0px auto;
+	}
+}
+
+
+// square 
+.sqaures-holder {
+	background-color: @content-bg-color;
+	padding: @default-spacing;	
+}
+.square{
+	
+	img {
+		width: 100%;
+		display: block;
+		margin: 8px auto;
+	}
+	
+	h4 {
+		background: @accent-color;
+		padding: @default-spacing / 2;
+		color: @content-bg-color;
+		text-transform: uppercase;
+	}
+	
+	a {
+		.addButtonStyles();
+		float: right;
+	}
+}
